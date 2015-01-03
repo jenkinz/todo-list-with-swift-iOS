@@ -35,15 +35,15 @@ class FirstViewController: UIViewController , UITableViewDelegate , UITableViewD
         tblTasks.reloadData()
     }
     
-    func tableView(tableView: UITableView!, numberOfRowsInSection section: Int) -> Int{
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int{
         return taskMngr.tasks.count
     }
     
     
-    func tableView(tableView: UITableView!, cellForRowAtIndexPath indexPath: NSIndexPath!) -> UITableViewCell!{
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell{
         let cell: UITableViewCell = UITableViewCell(style: UITableViewCellStyle.Subtitle , reuseIdentifier: "test")
-        cell.text = taskMngr.tasks[indexPath.row].name
-        cell.detailTextLabel.text = taskMngr.tasks[indexPath.row].desc
+        cell.textLabel!.text = taskMngr.tasks[indexPath.row].name
+        cell.detailTextLabel!.text = taskMngr.tasks[indexPath.row].desc
         return cell
     }
     

@@ -24,7 +24,7 @@ class SecondViewController: UIViewController , UITextFieldDelegate {
         self.view.endEditing(true)
         txtTask.text = ""
         txtDesc.text = ""
-        self.tabBarController.selectedIndex = 0
+        self.tabBarController?.selectedIndex = 0
         
     }
     
@@ -34,7 +34,7 @@ class SecondViewController: UIViewController , UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func touchesBegan(touches: NSSet!, withEvent event: UIEvent!) {
+    override func touchesBegan(touches: NSSet, withEvent event: UIEvent) {
         self.view.endEditing(true)
     }
     
